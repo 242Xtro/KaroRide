@@ -1,0 +1,43 @@
+{
+  "version": "1.2.0-preview.1",
+  "version_code": 9,
+  "apk_sha256": "c8973c6097b3d06271db40eddf57bb94ce8b523a78c978f0b98d541705a746e2",
+  "simulation": {
+    "passed": 122,
+    "failed": 0,
+    "scope": "JVM simulated camera adapter; not Bluetooth hardware"
+  },
+  "android_release": {
+    "built": true,
+    "lint_errors": 0,
+    "lint_warnings": 18,
+    "offline_rebuild_byte_identical": true,
+    "abi": "arm64-v8a",
+    "minimum_api": 31,
+    "target_api": 34
+  },
+  "hardware": {
+    "agent_tests": 0,
+    "user_report": "Previous basic Ace Pro and GO 3S Action Pod controls, switch after stop, data field and ride page confirmed by user. KaroRide 1.1.1 installed by user; 1.2.0 language picker and exact per-case hardware matrix not yet validated.",
+    "pending": [
+      "GO 3S outside Action Pod",
+      "Long wake-up intervals",
+      "Connection loss and restart matrix",
+      "Sensor coexistence",
+      "Native 1.2.0 language picker, persistence and live recording during language change"
+    ]
+  },
+  "no_camera_identifiers_or_private_logs": true,
+  "proprietary_sdk": "Camera SDK 2.1.5 requires separate authorised developer access; SDK packages and private release key excluded from source.",
+  "localization": {
+    "default": "en",
+    "selectable": [
+      "en",
+      "de"
+    ],
+    "private_preference": true,
+    "keys_per_language": 225,
+    "known_core_messages_mapped": true,
+    "native_language_ui_and_restart_test": "PENDING"
+  }
+}

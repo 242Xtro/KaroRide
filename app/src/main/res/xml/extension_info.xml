@@ -1,0 +1,11 @@
+<ExtensionInfo id="aceride" displayName="KaroRide" icon="@drawable/ic_aceride" scansDevices="false">
+    <DataType typeId="status" displayName="@string/field_status_name" description="@string/field_status_description" graphical="true" icon="@drawable/ic_aceride" />
+    <DataType typeId="control" displayName="@string/field_control_name" description="@string/field_control_description" graphical="true" icon="@drawable/ic_aceride" />
+    <DataType typeId="start-stop" displayName="@string/field_toggle_name" description="@string/field_toggle_description" graphical="true" icon="@drawable/ic_aceride" />
+    <BonusAction actionId="start" displayName="@string/bonus_start" />
+    <BonusAction actionId="stop" displayName="@string/bonus_stop" />
+    <BonusAction actionId="pause" displayName="@string/bonus_pause" />
+    <BonusAction actionId="resume" displayName="@string/bonus_resume" />
+    <BonusAction actionId="wake" displayName="@string/bonus_wake" />
+    <BonusAction actionId="power-off" displayName="@string/bonus_off" />
+</ExtensionInfo>

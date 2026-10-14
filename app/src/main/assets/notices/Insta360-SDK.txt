@@ -1,0 +1,7 @@
+Insta360 Android Camera SDK 2.1.5
+Proprietary SDK, obtained with an approved personal developer application.
+Used as licensed binaries in the KaroRide camera-control preview.
+SDK terms: https://www.insta360.com/support/supportcourse?post_id=20734
+SDK Media module and firmware-upgrade functionality are not used.
+No manufacturer Demo source code is included in KaroRide.
+Original SDK artifacts and their metadata are preserved locally.

@@ -1,0 +1,59 @@
+{
+  "recorded": "2026-10-12",
+  "host": "macOS arm64",
+  "bootstrap": [
+    {
+      "id": "jdk",
+      "version": "jdk-17.0.20.1+1",
+      "archive": "OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.20.1_1.tar.gz",
+      "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.20.1%2B1/OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.20.1_1.tar.gz",
+      "sha256": "196d13ba5f10414bef7f6a05a9b3f00edacb18ebacef2b99485db9e2ee18f0e8",
+      "destination": ".toolchain/jdk"
+    },
+    {
+      "id": "gradle",
+      "version": "8.13",
+      "archive": "gradle-8.13-bin.zip",
+      "url": "https://services.gradle.org/distributions/gradle-8.13-bin.zip",
+      "sha256": "20f1b1176237254a6fc204d8434196fa11a4cfb387567519c61556e8710aed78",
+      "destination": ".toolchain/gradle-8.13"
+    },
+    {
+      "id": "android-commandline",
+      "version": "22.0 / archive 15859902, mac_arm64",
+      "archive": "commandlinetools-mac_arm64-15859902_latest.zip",
+      "url": "https://dl.google.com/android/repository/commandlinetools-mac_arm64-15859902_latest.zip",
+      "sha256": "835b62a26162b229b441d1f6d4680383815a270809eb33522c0d480fa5002c4e",
+      "destination": ".toolchain/android-sdk/cmdline-tools/22.0"
+    }
+  ],
+  "android_packages": [
+    {
+      "package": "platforms;android-36",
+      "revision": "2",
+      "url": "https://dl.google.com/android/repository/platform-36_r02.zip",
+      "publisher_sha1": "2c1a80dd4d9f7d0e6dd336ec603d9b5c55a6f576",
+      "sha256": "37607369a28c5b640b3a7998868d45898ebcb777565a0e85f9acf36f29631d2e"
+    },
+    {
+      "package": "build-tools;36.0.0",
+      "revision": "36.0.0",
+      "url": "https://dl.google.com/android/repository/build-tools_r36_macosx.zip",
+      "publisher_sha1": "199ae0047ee61e842f8ee0c6d3918e44fb9a1f83",
+      "sha256": "04e7f3a72044de4926fa038fa0e251a37bba1e1c3fb8beab6f8401bfd9eb4bf3"
+    },
+    {
+      "package": "platform-tools",
+      "revision": "37.0.1",
+      "url": "https://dl.google.com/android/repository/platform-tools_r37.0.1-darwin.zip",
+      "publisher_sha1": "6ae73f4de6452dc57e62ec02b68eed92a4c21661",
+      "sha256": "ee39ad5967e95c2a07f04dbcbde96b1a0c916ba376096db5d2f498b7727a5d1d"
+    }
+  ],
+  "sources": [
+    "https://api.adoptium.net/v3/assets/latest/17/hotspot?architecture=aarch64&image_type=jdk&os=mac&vendor=eclipse",
+    "https://services.gradle.org/distributions/gradle-8.13-bin.zip.sha256",
+    "https://developer.android.com/studio#command-tools",
+    "https://dl.google.com/android/repository/repository2-1.xml"
+  ]
+}

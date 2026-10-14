@@ -1,0 +1,29 @@
+KaroRide — Karoo camera-control preview, 2026-10-13
+
+Includes unmodified public runtime source from:
+Hammerhead karoo-ext 1.1.9
+https://github.com/hammerheadnav/karoo-ext
+Commit f79f103cd0e1a9808db64474796b30d822cc0b17
+Copyright (c) 2024, 2025 SRAM LLC. Individual source notices are preserved.
+Licensed under the Apache License, Version 2.0 (see licenses/karoo-ext-APACHE-2.0.txt).
+The local build.gradle.kts is a KaroRide build adaptation; it replaces only the
+upstream publishing/documentation build, not the runtime source.
+
+ClipRide (MIT; Copyright (c) 2026 Yuri Kan) and KarooInsta360Ctl (Apache-2.0)
+were reviewed as user-interface/protocol references. Their application source,
+graphics, trademarks and signing keys are not used in the KaroRide application.
+Their downloaded public research snapshots are retained separately in research/.
+The research/ directory is never packaged into an APK.
+
+insta360ctl has no root LICENSE file in the reviewed snapshot and GitHub reported
+no license. No source code from it is incorporated into KaroRide.
+
+The hardware variant includes proprietary Insta360 Camera SDK 2.1.5 binaries
+from the user's authorized SDK access, including required native dependencies.
+SDK source companions were inspected locally to verify cache/request semantics;
+no SDK implementation or manufacturer Demo source was copied into KaroRide.
+Distribution and notices remain subject to the authorized SDK license:
+https://www.insta360.com/support/supportcourse?post_id=20734
+Original packages, metadata and component hashes are retained locally.
+The Apache license of KaroRide/karoo-ext does not license proprietary SDK binaries.
+
