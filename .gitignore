@@ -15,5 +15,3 @@ local-sdk/
 __pycache__/
 .env
 .env.*
-website/karoride/downloads/*
-!website/karoride/downloads/README.txt

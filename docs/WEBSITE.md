@@ -1,30 +1,28 @@
-# Static product website
+# Project website / Projektwebseite
 
-`website/karoride/` contains the standalone DE/EN product page, privacy page,
-local SVG illustrations, mobile navigation and responsive styling. No build step,
-font CDN, analytics, payment widget or package installation is required.
+The project website is https://hellmold.de/karoride/. Its texts, section order and
+visual style are the reference for the repository README. The site is maintained
+on its own webspace. Website HTML, CSS, JavaScript and download copies are not
+kept in this repository.
 
-Publish this directory as `/karoride/` on your own webspace. The Hellmold homepage
-and other personal projects are intentionally excluded from this repository.
-The full, private upload package also includes the two updated homepage files.
+The README links to the live website, release download, other language and Ko-fi.
+The camera table, three footnotes, three installation steps and eight questions
+follow the English and German website versions checked on 14 October 2026.
 
-Configure public links/release metadata in `assets/config.js`. Only set
-`repositoryUrl` after the actual repository exists. Add the official APK and
-checksum to `downloads/` when deploying; binaries are excluded from source Git.
+The title image at docs/images/karoride-banner-v2.png is rendered from the live
+English hero using Playwright at 1280 CSS pixels with device scale factor 2.
+The PNG is 2560 by 1516 pixels. Header and support notices are omitted. It shows
+a website illustration, not an actual Karoo screen. Genuine device screenshots
+will be added when available.
 
-Photo slots: `images.hero` (camera/bike, portrait or landscape crop), `images.ride`
-(wide cycling image). Screenshot slots: `screenshots.control`, `ride`, `field`,
-`selection`. Paths must be relative/local, e.g. `assets/images/ride.webp`.
-Use only your own or appropriately licensed images. Illustrations remain visible
-until configured image files load successfully. No genuine hardware screenshots
-are included yet.
+The social image at docs/images/karoride-social-v1.png uses the same live page
+and styles, arranged for a 1280 by 640 pixel link preview. Upload it manually in
+GitHub Settings, General, Social preview, Edit, Upload an image.
 
-Parallax is bounded, scroll-driven and disabled at 760px or less and for
-`prefers-reduced-motion: reduce`. There is no scroll hijacking or continuous
-animation loop. The dismissible Ko-fi message appears only after the hero and
-before the main support section. Dismissal lasts for the current browser session.
-Language uses `hellmold_lang`, matching the existing homepage. These storage
-choices are described on the project privacy page.
+Set the About website field to https://hellmold.de/karoride/.
+The repository description and topics remain unchanged.
 
-The website is bilingual; the native app defaults to English with German selectable in its three-dot menu. The visual
-camera illustration is labelled as such and is not a live device demo.
+Deutsch: Die Webseite wird ausschließlich auf hellmold.de gepflegt. Die Bilder
+im Repository sind gerenderte Illustrationen der Webseite. Sie ersetzen keine
+Geräte-Screenshots. Das Social-Preview-Bild wird in den GitHub-Einstellungen
+manuell hochgeladen; der Website-Link gehört in About.

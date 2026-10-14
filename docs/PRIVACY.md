@@ -5,10 +5,10 @@ The app uses Bluetooth and a connected-device foreground service. It requests no
 internet, location, media, storage or notification-access permission. Camera videos
 remain on the camera. SDK use requires local acceptance before initialisation.
 
-The static project website loads its own assets, stores language preference locally
-and embeds no analytics or payment widgets. The support link opens Ko-fi only
-when clicked; payment providers have their own data handling. Full website and SDK
-information: https://www.hellmold.de/karoride/datenschutz.html.
+The [project website](https://hellmold.de/karoride/) is hosted and maintained
+separately from this repository. Its current privacy information is available at
+https://hellmold.de/karoride/datenschutz.html. The support link opens Ko-fi only
+when clicked; payment providers have their own data handling.
 
 Deutsch: Kameraauswahl und Pausenabsicht bleiben im privaten App-Speicher. Videos
 werden nicht hochgeladen. Auf der Webseite ist Unterstützung freiwillig; der

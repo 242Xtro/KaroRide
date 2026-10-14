@@ -12,7 +12,7 @@ Actual build inputs are pinned, rather than claiming latest-version compatibilit
 
 Reviewed references, not incorporated application source/assets:
 
-- [ClipRide](https://github.com/yrkan/clipride/tree/74dec2d9f41da06b8d73fbdcd42e7e2f9773ba4a), MIT, Copyright 2026 Yuri Kan: Karoo interaction reference. The KaroRide website uses its own layout, styles, copy and SVG illustrations. No ClipRide page code, images or GoPro adapter copied.
+- [ClipRide](https://github.com/yrkan/clipride/tree/74dec2d9f41da06b8d73fbdcd42e7e2f9773ba4a), MIT, Copyright 2026 Yuri Kan: Karoo interaction reference. The separately maintained [KaroRide website](https://hellmold.de/karoride/) uses its own layout, styles, copy and illustrations. No ClipRide page code, images or GoPro adapter copied.
 - [KarooInsta360Ctl](https://github.com/jpa5635/KarooInsta360Ctl/tree/623f65198d1183db8de9c663c3048960142c6c2d), Apache-2.0: evaluated Bluetooth adapter. No source copied.
 - [insta360ctl](https://github.com/xaionaro-go/insta360ctl/tree/f94193ce03c5af0921a9992bfd1af6bd946150d0): no root license in reviewed snapshot; no source copied.
 - [Camera integration docs](https://github.com/Insta360Develop/Insta360-Developer_Docs/tree/caa3700d0bf2a1b96317211f64431bcd0dfe11c0): API reference, not a complete SDK package.

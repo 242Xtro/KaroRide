@@ -1,76 +1,119 @@
 # KaroRide
 
-![KaroRide — Fokus auf die Fahrt. Die Kamera in Reichweite.](docs/images/karoride-banner.svg)
+![Illustration der Projektseite mit Kamerasteuerung am Karoo](docs/images/karoride-banner-v2.png)
 
-**Deine Ace Pro oder GO 3S direkt am Hammerhead Karoo 3 steuern.**
+KaroRide ist eine kostenlose Extension für den Hammerhead Karoo 3, mit der du deine Insta360 Ace Pro oder GO 3S direkt am Lenker steuerst.
 
-**Preview `1.2.0-preview.1`** · [Download & Versionshinweise](https://github.com/242Xtro/KaroRide/releases/tag/v1.2.0-preview.1) · [English](README.md) · [Kaffee ausgeben](https://ko-fi.com/karoride)
+[Website](https://hellmold.de/karoride/) · [Download 1.2.0-preview.1](https://github.com/242Xtro/KaroRide/releases/tag/v1.2.0-preview.1) · [English](README.md) · [Ko-fi](https://ko-fi.com/karoride)
 
-Große Fahrtasten, Start/Stopp-Datenfeld, Kameraauswahl und klare Statusanzeige.
-Jeweils eine ausgewählte Kamera wird gesteuert. Pause beendet den Clip; Fortsetzen
-startet eine neue Datei. Fahrtstart, Wiederverbindung und Karoo-Neustart starten
-keine Aufnahme automatisch. Videoeinstellungen bleiben bestehen.
+Das Titelbild ist eine gerenderte Illustration der Webseite, kein Geräte-Screenshot. Fotos von echten Fahrten und Screenshots folgen.
 
-| Auf deiner Fahrtseite | Auf einen Blick | Einmal einrichten |
+## Was es kann
+
+Leg KaroRide als ganze Datenseite an, und du hast große Tasten für Wecken, Start, Pause, Stopp und Ausschalten, dazu Akku, freien Speicher und Cliplänge auf einen Blick.
+
+Lieber deine gewohnte Seite? Setz das Start/Stopp-Feld zwischen Tempo und Leistung und steuere die Kamera, ohne die Seite zu wechseln.
+
+Eine Aufnahme gilt erst als laufend, wenn die Kamera sie bestätigt. Reißt Bluetooth ab, zeigt KaroRide **Unbekannt** und behält den letzten bestätigten Stand, statt sich einen auszudenken.
+
+## Kameras
+
+| Funktion | Insta360 Ace Pro, 1. Generation | Insta360 GO 3S, im Action Pod getestet |
 |---|---|---|
-| Große Tasten für Start, Stopp, Pause und Fortsetzen | Aufnahme, Verbindung, Akku, freier Speicher, Cliplänge | Kameraprofile speichern; nach Stopp umschalten |
-| Ganze Kameraseite oder kompaktes Start/Stopp-Feld | Bestätigter Kamerastatus; unbekannte Zustände klar gekennzeichnet | Englisch als Standard, Deutsch wählbar; nach Einrichtung offline |
+| Aufnahme starten und stoppen | Ja | Ja |
+| Pausieren und fortsetzen<sup>3</sup> | Ja | Ja |
+| Akku, freier Speicher, Cliplänge | Ja | Ja |
+| Kamera vom Karoo aus wecken | Ja<sup>1</sup> | Im Test |
+| Kamera vom Karoo aus ausschalten | Ja | Nein<sup>2</sup> |
 
-Das Titelbild ist eine Designillustration. Echte Geräte-Screenshots ergänzen wir
-später. Die eigene Projektwebseite auf hellmold.de ist in Vorbereitung.
+1. Ace Pro: In den Kameraeinstellungen **Bluetooth Wakeup** einschalten. KaroRide meldet die Kamera erst als wach, wenn sie verbunden ist und geantwortet hat.
+2. GO 3S: Das Insta360-SDK hat für sie keinen Ausschaltbefehl. In KaroRide trennen, dann an der Kamera ausschalten. Der Betrieb außerhalb des Action Pods ist noch nicht getestet.
+3. Pause beendet den aktuellen Clip, Weiter startet einen neuen. Das ist bei beiden Kameras gleich.
 
-## Kameras und Grenzen
+Als Nächstes kommt die **X3**. **X5** und **Ace Pro 2** sind geplant und in dieser Preview noch nicht unterstützt. Wenn du eine davon hast und beim Testen helfen magst, [schreib ein Issue auf GitHub](https://github.com/242Xtro/KaroRide/issues).
 
-- **Ursprüngliche Ace Pro, erste Generation:** manuelle Steuerung, Akku, freier
-  Speicher und Dauer; SDK-Adapter für Aufwecken/Ausschalten. Bluetooth Wakeup muss
-  an der Kamera aktiviert sein. Aufwecken zählt erst nach Verbindung und Statusantwort.
-- **GO 3S:** manuelle Bedienung und Kamerawechsel; Grundbedienung im Action Pod vom
-  Nutzer bestätigt. Ausschalten wird vom verwendeten SDK nicht unterstützt:
-  Verbindung zuerst trennen, danach am Gerät ausschalten.
+## Installation
 
-Der Nutzer bestätigt bisherige Grundbedienung, Wechsel nach Stopp sowie Datenfeld
-und eigene Fahrtseite. Vollständige Einzeltests einschließlich GO 3S außerhalb
-des Pods, längerer Ausschaltzeiten und Funkverlust-/Neustart-/Sensorfällen bleiben
-offen. Die neue Sprachauswahl in 1.2.0 und ihre Speicherung brauchen noch eine Geräteprüfung.
-Die App startet auf Englisch; über die drei Punkte → Language / Sprache ist Deutsch wählbar. Auswahl lokal gespeichert; Webseite und Dokumentation DE/EN.
+1. **APK auf den Karoo bringen.** Öffne die [Webseite](https://hellmold.de/karoride/) auf dem Handy und lade die APK herunter. Tipp auf Teilen und wähl die Hammerhead-Companion-App. Oder teile den [APK-Downloadlink des GitHub-Release](https://github.com/242Xtro/KaroRide/releases/download/v1.2.0-preview.1/KaroRide-1.2.0-preview.1.apk) mit der Companion-App. Bestätige Installieren auf deinem gekoppelten Karoo. [Sideloading-Anleitung von Hammerhead](https://support.hammerhead.io/hc/en-us/articles/31576497036827-Companion-App-Sideloading).
+2. **Kamera koppeln.** Am Karoo Extensions, KaroRide, Öffnen. SDK-Hinweis bestätigen und Bluetooth erlauben. Kamera einschalten, in der Liste auswählen und an der Kamera bestätigen, falls sie fragt.
+3. **Ins Fahrprofil einbauen.** Eine Datenseite mit **KAMERA STEUERUNG** als einzigem Feld anlegen. Oder **KAMERA START / STOPP** neben deine gewohnten Daten setzen. Auf Englisch heißen die Felder **CAMERA CONTROL** und **CAMERA START / STOP**.
 
-**Geplant, noch nicht enthalten:** X3 als nächster Ausbau, anschließend X5 und
-Ace Pro 2 mit Gerätetestern. Keine Terminzusage.
+Später aktualisieren: Neue APK einfach über die alte installieren. Nicht vorher deinstallieren, dann bleiben deine Einstellungen erhalten. Verwende weiterhin die Projekt-APK. Community-Builds mit anderem Schlüssel können sie nicht als Update ersetzen. [Prüfsumme und Update-Hinweise](docs/RELEASE.md).
 
-## Einrichtung
+## Fragen
 
-1. **KaroRide-1.2.0-preview.1.apk** und die `.sha256`-Datei beim
-   [Preview-Release](https://github.com/242Xtro/KaroRide/releases/tag/v1.2.0-preview.1) herunterladen.
-2. APK auf dem Smartphone über „Teilen“ an Hammerhead Companion geben und
-   Installation am Karoo bestätigen. [Offizielle Anleitung](https://support.hammerhead.io/hc/en-us/articles/31576497036827-Companion-App-Sideloading).
-3. Extensions → KaroRide → Open: SDK-Hinweis bestätigen, notwendige Bluetooth-Rechte
-   erlauben, eingeschaltete Kamera suchen und auswählen. Autorisierung gegebenenfalls am Gerät bestätigen.
-4. Im Fahrprofil eine Datenseite mit ausschließlich **CAMERA CONTROL / KAMERA
-   STEUERUNG** anlegen, oder **CAMERA START / STOP / KAMERA START / STOPP** neben
-   die üblichen Daten setzen. Karoo-Auswahlmenüs können der Systemsprache folgen.
+<details>
+<summary>Brauche ich unterwegs mein Handy?</summary>
 
-Vor der Fahrt App öffnen und verbinden. Bei Funkverlust kann die Kamera weiter
-aufnehmen. Die Anzeige wird unbekannt; nach erneuter Verbindung zuerst echten Zustand abgleichen.
+Nein. Der Karoo spricht direkt per Bluetooth mit der Kamera. Das Handy brauchst du nur einmal, um die APK auf den Karoo zu bringen.
 
-## AceRide wird KaroRide
+</details>
 
-Paketkennung `de.markus.aceride`, Extension-ID `aceride`, Feld-IDs und eigener
-Updateschlüssel bleiben erhalten. Projekt-APK als Update installieren,
-vorher nicht deinstallieren. versionCode 9; bestehende Kameraauswahl bleibt
-normalerweise erhalten. SDK-Hinweis einmal bestätigen. Videos bleiben auf der Kamera.
+<details>
+<summary>Was passiert, wenn die Verbindung abreißt?</summary>
 
-[Build-Anleitung](docs/BUILD.md) · [Datenschutz](docs/PRIVACY.md) · [Prüfsummen & Updates](docs/RELEASE.md) · [Prüfungen](docs/VALIDATION.json)
+Die Kamera nimmt unter Umständen weiter auf. KaroRide zeigt den Zustand als Unbekannt und markiert den letzten bestätigten Stand. Nach dem Wiederverbinden liest es den echten Zustand von der Kamera.
 
-122/122 JVM-Simulationen bestanden, Android-Release gebaut, vollständiger Offline-
-Nachbau bytegleich. Lint: 0 Fehler, 18 dokumentierte Warnungen. Keine von Codex ausgeführten Hardwaretests.
-Das verwendete Hersteller-SDK erfordert eigenen genehmigten Entwicklerzugang.
-Zugangsdaten und Signierungsschlüssel liegen nur lokal und gehören nicht ins Repository.
+</details>
 
-Die App bleibt kostenlos. [Ein Kaffee auf Ko-fi](https://ko-fi.com/karoride)
-unterstützt die Weiterentwicklung — oder auch mal einen neuen Schlauch.
-Alles freiwillig, ohne Supportvertrag oder Terminzusage. Für Fehler bitte Schritte/Version/Modell angeben,
-keine Kamera-IDs, Passwörter oder privaten Protokolle veröffentlichen.
+<details>
+<summary>Bleibt eine Pause in derselben Videodatei?</summary>
 
-Eigener Code und Hammerhead-Runtime: Apache-2.0, [LICENSE](LICENSE)/[NOTICE](NOTICE).
-Hersteller-SDK: proprietär; die eigene Lizenz gilt nicht für dessen Binaries.
-Unabhängiges Projekt von Markus Hellmold, keine offizielle Hersteller-App.
+Nein. Pause beendet den Clip, Weiter beginnt eine neue Videodatei. KaroRide merkt sich je Kamera, dass du pausiert hast.
+
+</details>
+
+<details>
+<summary>Kann ich zwei Kameras gleichzeitig steuern?</summary>
+
+KaroRide steuert jeweils eine ausgewählte Kamera. Eine laufende Aufnahme vor dem Wechsel stoppen oder pausieren. Das ist eine Regel der App, keine Grenze der Kameras.
+
+</details>
+
+<details>
+<summary>Warum kann ich die GO 3S nicht ausschalten?</summary>
+
+Das verwendete SDK hat dafür keinen Ausschaltbefehl. Erst in KaroRide trennen, dann die Kamera am Gerät ausschalten. Ein dunkles Pod-Display heißt nicht automatisch, dass sie aus ist.
+
+</details>
+
+<details>
+<summary>Ändert KaroRide meine Videoeinstellungen?</summary>
+
+Nein. Auflösung, Bildrate und Stabilisierung bleiben, wie sie sind. Einen passenden Videomodus stellst du an der Kamera ein; KaroRide wechselt ihn nie stillschweigend.
+
+</details>
+
+<details>
+<summary>Ist die App englisch oder deutsch?</summary>
+
+Beides. KaroRide startet auf Englisch. Im Drei-Punkte-Menü unter Language / Sprache stellst du auf Deutsch um, die Fahrtfelder wechseln mit.
+
+</details>
+
+<details>
+<summary>Ist das eine offizielle App?</summary>
+
+Nein. KaroRide ist ein unabhängiges Projekt. Es nutzt das Insta360 Camera SDK und Hammerheads karoo-ext, ohne Partnerschaft mit einer der beiden Firmen.
+
+</details>
+
+## Build
+
+[Build-Anleitung](docs/BUILD.md) · [Quellen und Versionen](docs/SOURCES.md) · [Prüfergebnisse](docs/VALIDATION.json)
+
+Werkzeug- und Abhängigkeitsversionen sind festgelegt. Entwickler benötigen eigenen genehmigten Insta360-SDK-Zugang und einen eigenen privaten Signierungsschlüssel. SDK-Pakete, Zugangsdaten und unser Updateschlüssel sind nicht im Repository enthalten. Kein Cloud-Build ist eingerichtet.
+
+Für diese unveränderte APK wurden 122 JVM-Simulationen, der Android-Release-Build und ein bytegleicher Offline-Nachbau bestanden. Lint: 0 Fehler und 18 Warnungen. Bisherige Grundbedienung der Ace Pro und GO 3S im Action Pod wurde vom Nutzer bestätigt. Die neue Sprachauswahl von 1.2.0 und die vollständige Hardware-Testmatrix brauchen noch Geräteprüfungen. Ein Build oder eine Simulation ist kein Bluetooth-Kompatibilitätsnachweis.
+
+## Datenschutz
+
+Kameraprofile, Pausenabsicht und Sprachwahl bleiben im privaten App-Speicher. Videos bleiben auf der Kamera. Die App nutzt Bluetooth und einen Connected-Device-Foreground-Service, ohne Internet-, Standort-, Medien-, Speicher- oder Benachrichtigungszugriffsrecht. [App-Datenschutz](docs/PRIVACY.md) · [Webseiten-Datenschutz](https://hellmold.de/karoride/datenschutz.html?lang=de).
+
+Unterstützung über [Ko-fi](https://ko-fi.com/karoride) ist freiwillig. KaroRide bleibt kostenlos. Der Zahlungsanbieter öffnet sich erst beim Linkklick.
+
+## Lizenz
+
+Eigener Code und die enthaltene Hammerhead-Runtime stehen unter Apache-2.0. Siehe [LICENSE](LICENSE), [NOTICE](NOTICE) und [Quellennachweise](docs/SOURCES.md). Das proprietäre Insta360-SDK unterliegt weiterhin den [SDK-Bedingungen](https://www.insta360.com/support/supportcourse?post_id=20734). Die Apache-Lizenz gewährt keine Rechte an diesen Binaries.
+
+KaroRide ist ein unabhängiges Projekt von Markus Hellmold, ohne Partnerschaft mit Hammerhead oder Insta360. Produktnamen benennen kompatible Geräte. Es wird kein fremder App-Signierungsschlüssel verwendet. Die Software wird ohne Gewähr bereitgestellt.

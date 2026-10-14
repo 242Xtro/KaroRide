@@ -1,4 +1,4 @@
-# KaroRide 1.2.0-preview.1 — Englisch und Deutsch
+# KaroRide 1.2.0-preview.1: Englisch und Deutsch
 
 Englisch ist die Standardsprache, auch auf einem deutsch eingestellten Karoo.
 Oben rechts über die drei Punkte öffnet sich das bisherige Menü. Der erste Eintrag
